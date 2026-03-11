@@ -1,0 +1,2 @@
+# sistem_informasi_pendataan_kelahiran_prak_oop
+Tugas praktikum Sistem Pendataan Kelahiran menggunakan Java NetBeans
