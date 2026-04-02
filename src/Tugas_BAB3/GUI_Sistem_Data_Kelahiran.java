@@ -39,9 +39,9 @@ public class GUI_Sistem_Data_Kelahiran extends javax.swing.JPanel {
         cmb_Kelamin = new javax.swing.JComboBox<>();
         txtTanggal = new javax.swing.JTextField();
         txtAlamat = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        Btn_tampilkan = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txt_Tampilan = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -72,16 +72,16 @@ public class GUI_Sistem_Data_Kelahiran extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setText("Tampilkan Data");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Btn_tampilkan.setText("Tampilkan Data");
+        Btn_tampilkan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                Btn_tampilkanActionPerformed(evt);
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txt_Tampilan.setColumns(20);
+        txt_Tampilan.setRows(5);
+        jScrollPane1.setViewportView(txt_Tampilan);
 
         jLabel8.setText("Berat Bayi");
 
@@ -142,7 +142,7 @@ public class GUI_Sistem_Data_Kelahiran extends javax.swing.JPanel {
                                     .addComponent(txtAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(221, 221, 221)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Btn_tampilkan, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                             .addContainerGap()
                             .addComponent(jLabel1)
@@ -190,7 +190,7 @@ public class GUI_Sistem_Data_Kelahiran extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addComponent(txtBerat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(Btn_tampilkan)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(26, Short.MAX_VALUE))
@@ -201,7 +201,7 @@ public class GUI_Sistem_Data_Kelahiran extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_cmb_KelaminActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void Btn_tampilkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_tampilkanActionPerformed
                                          
 // Ambil data dari form
 String namaBayi = txtNamaBayi.getText();
@@ -243,7 +243,7 @@ else{
 }
 
 // Output dasar
-jTextArea1.setText(
+txt_Tampilan.setText(
     "Nama Bayi : " + data.namaBayi + "\n" +
     "Nama Ayah : " + data.namaAyah + "\n" +
     "Nama Ibu : " + data.namaIbu + "\n" +
@@ -254,26 +254,26 @@ jTextArea1.setText(
 
 // Tambahan output agar semua data muncul
 if(!beratStr.isEmpty()){
-    jTextArea1.append("\nBerat Bayi : " + beratStr + " kg");
+    txt_Tampilan.append("\nBerat Bayi : " + beratStr + " kg");
 }
 
 if(!panjangStr.isEmpty()){
-    jTextArea1.append("\nPanjang Bayi : " + panjangStr + " cm");
+    txt_Tampilan.append("\nPanjang Bayi : " + panjangStr + " cm");
 }
 
 if(!rs.isEmpty()){
-    jTextArea1.append("\nRumah Sakit : " + rs);
+    txt_Tampilan.append("\nRumah Sakit : " + rs);
 }
 
 if(!dokter.isEmpty()){
-    jTextArea1.append("\nDokter : " + dokter);
+    txt_Tampilan.append("\nDokter : " + dokter);
 }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_Btn_tampilkanActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Btn_tampilkan;
     private javax.swing.JComboBox<String> cmb_Kelamin;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -286,7 +286,6 @@ if(!dokter.isEmpty()){
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField txtAlamat;
     private javax.swing.JTextField txtBerat;
     private javax.swing.JTextField txtDokter;
@@ -296,5 +295,6 @@ if(!dokter.isEmpty()){
     private javax.swing.JTextField txtPanjang;
     private javax.swing.JTextField txtRS;
     private javax.swing.JTextField txtTanggal;
+    private javax.swing.JTextArea txt_Tampilan;
     // End of variables declaration//GEN-END:variables
 }
